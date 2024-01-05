@@ -177,7 +177,7 @@ const sendMessage = async () => {
                 Authorization: `Bearer ${API_KEY}`,
             },
             body: JSON.stringify({
-                model: "deepinfra/airoboros-70b",
+            model: selectedModel, // This should reflect the selected model
                 messages: [
                  { role: "system", content: systemPrompt },
                     { role: "user", content: message } // The second user message, from the input
