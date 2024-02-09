@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 Not Found</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0; /* Gray background color */
+        font-family: Arial, sans-serif;
+        color: #333; /* Text color */
+    }
+    .container {
+        text-align: center;
+    }
+    #not-found {
+        font-size: 6em;
+        margin-bottom: 20px;
+    }
+    #typed-text {
+        font-size: 1.5em;
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflow text */
+        border-right: 3px solid #333; /* Create a typing cursor effect */
+        animation: typing 2s steps(40, end);
+    }
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div id="not-found">404</div>
+    <div id="typed-text">Page Not Found</div>
+</div>
+</body>
+</html>
