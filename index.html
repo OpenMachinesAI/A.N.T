@@ -36,57 +36,22 @@
     border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
-    opacity: 0; /* Start invisible */
-    transition: opacity 2s ease;
+    opacity: 1; /* Make buttons fully visible */
   }
 
   button:hover {
     background-color: #e6e6e6;
   }
-
-  .fade-in {
-    animation: fadeIn 4s;
-  }
-
-  .type-out {
-    display: inline-block;
-    animation: typing 5s steps(30, end), blink-caret 1s step-end infinite;
-    animation-fill-mode: forwards; /* Keep the end state after animation */
-  }
-
-  @keyframes fadeIn {
-    to { opacity: 1; }
-  }
-
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: white }
-  }
-
 </style>
 </head>
 <body>
 
 <div class="content">
-  <h1 id="ant" class="type-out">A.N.T</h1>
-  <p id="description" class="type-out">We’ve trained an A.I. system to talk like a human with a sarcastic personality and a sense of humour</p>
-  <button id="new-chat" class="fade-in" onclick="location.href='chat.html';">New Chat</button>
-  <button id="learn-more" class="fade-in" onclick="window.open('learn_more.html', '_blank');">Learn More</button>
+  <h1 id="ant">A.N.T</h1>
+  <p id="description">We’ve trained an A.I. system to talk like a human with a sarcastic personality and a sense of humour</p>
+  <button id="new-chat" onclick="location.href='chat.html';">New Chat</button>
+  <button id="learn-more" onclick="window.open('learn_more.html', '_blank');">Learn More</button>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function(){
-      document.getElementById('new-chat').style.opacity = 1;
-      document.getElementById('learn-more').style.opacity = 1;
-    }, 5000); // Wait for the typing animation to finish
-  });
-</script>
 
 </body>
 </html>
