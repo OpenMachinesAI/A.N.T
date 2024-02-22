@@ -9,12 +9,27 @@
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #004d00; /* Similar to the green background in the image */
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  video#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  .content {
+    z-index: 2;
+    text-align: center;
   }
 
   #ant {
@@ -28,23 +43,25 @@
     white-space: nowrap; /* Prevent text from wrapping */
     overflow: hidden; /* Hide overflow text */
     border-right: 3px solid white; /* Create a typing cursor effect */
-    animation: typing 5s steps(40, end);
+    animation: typing 5s steps(40, end) infinite;
   }
 
-  button {
+  .frosted-glass {
     margin: 20px 10px 0;
     padding: 10px 30px;
-    background-color: white;
-    color: #004d00; /* Matching the background */
-    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     font-size: 20px;
+    color: #FFFFFF;
     cursor: pointer;
-    opacity: 1; /* Make buttons fully visible */
+    transition: background 0.3s ease;
   }
 
-  button:hover {
-    background-color: #e6e6e6;
+  .frosted-glass:hover {
+    background: rgba(255, 255, 255, 0.3);
   }
 
   @keyframes typing {
@@ -55,11 +72,104 @@
 </head>
 <body>
 
+<video autoplay muted loop id="myVideo">
+  <source src="https://github.com/alexosthebestnet/A.N.T/raw/main/copy_0F527684-D715-41B5-A24C-25D067E419DD.mov" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
 <div class="content">
   <h1 id="ant">RuBi is here</h1>
-  <p id="description">RuBi is a AI model designed to enhance educational experiences.</p>
-  <button id="new-chat" onclick="location.href='RuBI.html';">New Chat</button>
-  <button id="learn-more" onclick="window.open('https://www.salextech.ca/rubi/', '_blank');">Learn More</button>
+  <p id="description">Ask me anything...</p>
+  <button class="frosted-glass" id="new-chat" onclick="location.href='RuBI.html';">New Chat</button>
+  <button class="frosted-glass" id="learn-more" onclick="window.open('https://www.salextech.ca/rubi/', '_blank');">Go to Classic ANT</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RuBi - Chat Based AI by sa.lex</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  video#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  .content {
+    z-index: 2;
+    text-align: center;
+  }
+
+  #ant {
+    font-size: 80px;
+    margin-bottom: 0;
+  }
+
+  #description {
+    font-size: 20px;
+    margin-top: 10px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    border-right: 3px solid white; /* Create a typing cursor effect */
+    animation: typing 5s steps(40, end) infinite;
+  }
+
+  .frosted-glass {
+    margin: 20px 10px 0;
+    padding: 10px 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .frosted-glass:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="https://github.com/alexosthebestnet/A.N.T/raw/main/copy_0F527684-D715-41B5-A24C-25D067E419DD.mov" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1 id="ant">RuBi is here</h1>
+  <p id="description">Ask me anything...</p>
+  <button class="frosted-glass" id="new-chat" onclick="location.href='RuBI.html';">New Chat</button>
+  <button class="frosted-glass" id="learn-more" onclick="window.open('https://www.salextech.ca/rubi/', '_blank');">Go to Classic ANT</button>
 </div>
 
 </body>
